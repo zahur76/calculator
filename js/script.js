@@ -62,38 +62,12 @@ $(document).ready(function(){
 
     function equal(){
         console.log(ops)
-        if (ops==="+"){
-            let result = parseInt(num1) + parseInt(num2);
-            $("#display").val(result);
-            num1 = result;
-            num2 = "";
-            ops = "";
-            console.log(result)                                              
-        }
-        else if (ops==="-"){
-            let result = parseInt(num1) - parseInt(num2);
-            $("#display").val(result); 
-            num1 = result;
-            num2 = "";
-            ops = "";
-                                    
-        }
-        else if (ops==="*"){
-            let result = parseInt(num1) * parseInt(num2);
-            $("#display").val(result);
-            num1 = result;
-            num2 = "";
-            ops = "";
-                                  
-        }
-        else if (ops==="/"){
-            let result = parseInt(num1) / parseInt(num2);
-            $("#display").val(result);
-            num1 = result;
-            num2 = "";
-            ops = "";
-                                  
-        }
+        let result = eval(num1 + ops + num2);
+        $("#display").val(result);
+        num1 = result;
+        num2 = "";
+        ops = "";
+        console.log(result)                                                       
     }
 
 })
